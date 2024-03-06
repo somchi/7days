@@ -14,7 +14,6 @@ function App() {
 
   const handleGetData = async () => {
     const res = await getData();
-    console.log(res);
     if (res.status === 200) {
       setData(res.data);
     } else {
