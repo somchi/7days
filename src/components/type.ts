@@ -1,5 +1,3 @@
-import { ATOM, NTRN } from '../helpers/contants';
-
 export type Series = {
   time: number;
   value: number;

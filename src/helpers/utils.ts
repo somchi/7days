@@ -1,4 +1,4 @@
-import { Pair, Price, Series } from '../components/type';
+import { Price, Series } from '../components/type';
 import { ATOM, CHAIN_ID, NTRN, RANGE } from './contants';
 
 const encodeJson = () => {

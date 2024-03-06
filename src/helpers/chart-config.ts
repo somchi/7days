@@ -11,8 +11,17 @@ export const options = {
       text: '7 days Price Chart of $ATOM-$NTRN pair',
     },
   },
-
+  layout: {
+    autoPadding: true,
+  },
   scales: {
+    x: {
+      display: true,
+      grid: {
+        display: false,
+      },
+    },
+
     y: {
       type: 'linear' as const,
       display: true,
