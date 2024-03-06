@@ -14,6 +14,7 @@ function App() {
 
   const handleGetData = async () => {
     const res = await getData();
+    console.log(res);
     if (res.status === 200) {
       setData(res.data);
     } else {
@@ -23,8 +24,18 @@ function App() {
 
   return (
     <div className="App">
-      {errMsg !== '' ? <p className="error">{errMsg}</p> : null}
-      {!isObjEmpty(data) ? <PriceChart data={data} /> : null}
+      <h2>Price Chart</h2>
+      {!isObjEmpty(data) ? (
+        <PriceChart data={data} />
+      ) : (
+        <div>
+          {errMsg !== '' ? (
+            <p className="error">{errMsg}</p>
+          ) : (
+            <p>...Loading</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

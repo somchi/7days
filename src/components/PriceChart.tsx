@@ -8,6 +8,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { options } from '../helpers/chart-config';
@@ -26,7 +27,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler
 );
 ChartJS.defaults.color = '#fff';
 
@@ -58,11 +60,7 @@ export const PriceChart = ({ data }: Props) => {
           borderColor: 'rgb(53, 162, 235)',
           backgroundColor: 'rgba(53, 162, 235, 0.5)',
           yAxisID: 'y1',
-          fill: {
-            target: 'end',
-            above: 'rgb(255, 0, 0)',
-            below: 'rgb(0, 0, 255)',
-          },
+          fill: true,
           pointRadius: 0,
           spanGaps: true,
           borderWidth: 0.8,

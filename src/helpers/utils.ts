@@ -31,7 +31,7 @@ export const getData = async () => {
       return responseSchema(response.status, data.error.json.message);
     }
   } catch (error: any) {
-    return responseSchema(500, { error });
+    return responseSchema(500, error.message);
   }
 };
 

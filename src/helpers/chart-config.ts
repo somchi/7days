@@ -10,6 +10,9 @@ export const options = {
       display: true,
       text: '7 days Price Chart of $ATOM-$NTRN pair',
     },
+    filler: {
+      propagate: false,
+    },
   },
   layout: {
     autoPadding: true,
